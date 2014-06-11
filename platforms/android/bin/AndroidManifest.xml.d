@@ -1,2 +1,2 @@
-/Users/Thoughtworker/workspaces/experiments/SocialDictionary/platforms/android/bin/AndroidManifest.xml : \
-/Users/Thoughtworker/workspaces/experiments/SocialDictionary/platforms/android/AndroidManifest.xml \
+/Users/Thoughtworker/workspaces/experiments/WhatShouldISay/platforms/android/bin/AndroidManifest.xml : \
+/Users/Thoughtworker/workspaces/experiments/WhatShouldISay/platforms/android/AndroidManifest.xml \

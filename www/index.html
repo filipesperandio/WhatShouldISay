@@ -24,20 +24,32 @@
     <script src="js/services.js"></script>
   </head>
   <body ng-app="starter" animation="slide-left-right-ios7" ng-controller="DashCtrl as ctrl">
-  <div class="card" ng-show="ctrl.word()">
-    <div class="item item-text-wrap">
-      <h1>
-        {{ ctrl.word() }}
-      </h1>
-    </div>
+
+  <ion-view title="Details">
+
+  <div class="bar bar-header bar-light">
+    <h1 class="title">What Should I Say?</h1>
   </div>
-    <div class="tabs tabs-icon-top tabs-assertive">
-      <a class="tab-item"
-        ng-click="ctrl.random()">
-        <i class="icon ion-help-buoy"></i>
-        Help!
-      </button>
+
+  <ion-content class="has-header has-footer">
+
+  <div class="card" ng-show="ctrl.word()">
+    <h1 class="item item-text-wrap bigger">
+      {{ ctrl.word() }}
+    </h1>
+  </div>
+
+  </ion-content>
+
+  <div class="tabs tabs-icon-top tabs-assertive">
+    <a class="tab-item"
+      ng-click="ctrl.random()">
+      <i class="icon ion-help-buoy"></i>
+      S.O.S.
     </a>
-    </div>
+  </div>
+
+  </ion-view>
+
   </body>
 </html>

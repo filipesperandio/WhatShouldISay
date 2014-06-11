@@ -28,6 +28,8 @@ angular.module('starter.controllers', [])
     return word;
   };
 
+  random();
+
   return {
     random : random,
     word: getWord
