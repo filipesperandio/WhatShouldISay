@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 
   var expresions = [
     "Wow, you are so smart!",
-    "You wanna medal !!!",
+    "You wanna medal!!!",
     "I like squash! Do you???",
     "Cool story bro!",
     "I think it's gonna rain today!",
@@ -14,7 +14,8 @@ angular.module('starter.controllers', [])
     "There's an app for that",
     "Hold on, let me refer to my social dictionary!",
     "Let's make an app for that!",
-    "Are you a genius?"
+    "Are you a genius?",
+    "Let's google that"
   ];
 
   var word;
