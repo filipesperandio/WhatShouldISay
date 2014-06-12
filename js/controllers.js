@@ -20,7 +20,7 @@ var Storage = function() {
 };
 
 var DashCtrl = function(Expressions, Storage, $timeout) {
-  
+
   Expressions.$on('loaded', function() {
     saveAll();
     Expressions.$on('change', saveAll);
@@ -30,19 +30,17 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
     var exp = angular.copy(Expressions, {});
     delete exp.$id;
     Storage.save(exp);
-    expressions = Storage.get();
   };
-
-  var expressions = Storage.get();
 
   var word;
 
   var random = function() {
-    var allExpressions = _.map(expressions, function(each) { return each });
+    var allExpressions = _.map(Storage.get(), function(value, key) { return _.extend(value, {"key": key}); });
     var index = Math.floor(Math.random() * allExpressions.length);
     word = allExpressions[index];
   };
 
+  var once = false;
   var getWord = function() {
     return word;
   };
@@ -51,7 +49,7 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
     Expressions.$add(exp);
     exp.value = undefined;
     createDone = true;
-    $timeout(function() { 
+    $timeout(function() {
       createDone = false;
     }, 2000);
   };
@@ -61,13 +59,31 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
     return createDone;
   };
 
+  var like = function() {
+    var item = Expressions.$child(word.key);
+    var likes = item.likes || 0;
+    likes++;
+    item.$update({"likes":likes});
+    word.likes = likes;
+  };
+
+  var dislike = function() {
+    var item = Expressions.$child(word.key);
+    var dislikes = item.dislikes || 0;
+    dislikes++;
+    item.$update({"dislikes":dislikes});
+    word.dislikes = dislikes;
+  };
+
   random();
 
   return {
     random : random,
     word: getWord,
     create : create,
-    done : done
+    done : done,
+    like : like,
+    dislike : dislike
   }
 
 };
@@ -77,4 +93,3 @@ angular.module('starter.controllers', [ 'firebase', 'ngResource' ])
 .factory('Expressions', [ '$firebase', 'FIREBASE_URL', Expressions ])
 .factory('Storage', [ Storage])
 .controller('DashCtrl', [ 'Expressions', 'Storage', '$timeout',  DashCtrl ]);
-
