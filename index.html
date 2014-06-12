@@ -14,6 +14,10 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/firebase/firebase.js"></script>
+    <script src="lib/angularfire/angularfire.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -35,11 +39,27 @@
 
   <div class="card" ng-show="ctrl.word()">
     <h1 class="item item-text-wrap bigger">
-      {{ ctrl.word() }}
+      {{ ctrl.word().value }}
     </h1>
   </div>
 
+
   </ion-content>
+
+
+  <div class="tabs down">
+    <div class="item item-input-inset">
+
+      <label class="item-input-wrapper">
+        <input type="text" ng-model="newExpression.value" placeholder="type your expression here" />
+      </label>
+      <button class="button button-small" ng-click="ctrl.create(newExpression)">
+        <i class="icon ion-checkmark-round" ng-show="ctrl.done()"></i>
+        Add
+      </button>
+    </div>
+  </div>
+
 
   <div class="tabs tabs-icon-top tabs-assertive">
     <a class="tab-item"

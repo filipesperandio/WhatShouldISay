@@ -3,3 +3,7 @@
 .bigger {
   font-size: 3rem;
 }
+
+.down {
+  bottom:50px;
+}
