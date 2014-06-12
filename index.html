@@ -47,17 +47,15 @@
   </ion-content>
 
 
-  <div class="tabs down">
-    <div class="item item-input-inset">
+  <div class="bar bar-footer down item item-input-inset">
 
       <label class="item-input-wrapper">
         <input type="text" ng-model="newExpression.value" placeholder="type your expression here" />
       </label>
-      <button class="button button-small" ng-click="ctrl.create(newExpression)">
+      <button class="button" ng-click="ctrl.create(newExpression)">
         <i class="icon ion-checkmark-round" ng-show="ctrl.done()"></i>
         Add
       </button>
-    </div>
   </div>
 
 
