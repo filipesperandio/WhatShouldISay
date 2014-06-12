@@ -39,7 +39,7 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
 
   var random = function() {
     var allExpressions = _.map(expressions, function(each) { return each });
-    var index = Math.floor((Math.random() * (allExpressions.length - 1)));
+    var index = Math.floor(Math.random() * allExpressions.length);
     word = allExpressions[index];
   };
 
