@@ -43,6 +43,15 @@
     </h1>
   </div>
 
+  <div class="center">
+    <a class="button button-assertive button-outline button-large ion-thumbsdown icon-right" ng-click="ctrl.dislike()">
+      {{ ctrl.word().dislikes || 0 }}
+    </a>
+
+    <a class="button button-balanced button-outline button-large ion-thumbsup icon-left" ng-click="ctrl.like()">
+      {{ ctrl.word().likes || 0 }}
+    </a>
+  </div>
 
   </ion-content>
 
