@@ -1,40 +1,81 @@
-angular.module('starter.controllers', [])
+var Expressions = function($firebase, FIREBASE_URL) {
+  var ref = new Firebase(FIREBASE_URL + '/expressions1');
+  return $firebase(ref);
+};
 
-.controller('DashCtrl', function() {
+var Storage = function() {
+  var save = function(obj) {
+    window.localStorage.setItem('expressions', JSON.stringify(obj));
+  };
 
-  var expresions = [
-    "Wow, you are so smart!",
-    "You wanna medal!!!",
-    "I like squash! Do you???",
-    "Cool story bro!",
-    "I think it's gonna rain today!",
-    "How about that local sports team?",
-    "Was your mother proud of you?",
-    "You should tell your mom",
-    "There's an app for that",
-    "Hold on, let me refer to my social dictionary!",
-    "Let's make an app for that!",
-    "Are you a genius?",
-    "Let's google that"
-  ];
+  var get = function() {
+    var expressions =  window.localStorage.getItem('expressions');
+    return JSON.parse(expressions);
+  };
+
+  return {
+    save : save,
+    get : get
+  };
+};
+
+var DashCtrl = function(Expressions, Storage, $timeout) {
+  
+  Expressions.$on('loaded', function() {
+    saveAll();
+    Expressions.$on('change', saveAll);
+  });
+
+  var saveAll = function() {
+    var exp = angular.copy(Expressions, {});
+    delete exp.$id;
+    Storage.save(exp);
+    expressions = Storage.get();
+  };
+
+  var expressions = Storage.get();
 
   var word;
 
   var random = function() {
-    var index = Math.floor((Math.random() * (expresions.length - 1)));
-    word = expresions[index];
+    var allExpressions = _.map(expressions, function(each) { return each });
+    var index = Math.floor((Math.random() * (allExpressions.length - 1)));
+    word = allExpressions[index];
   };
 
   var getWord = function() {
     return word;
   };
 
+  var create = function(exp) {
+    Expressions.$add(exp);
+    exp.value = undefined;
+    createDone = true;
+    $timeout(function() { 
+      createDone = false;
+    }, 2000);
+  };
+
+  var createDone = false;
+  var done = function() {
+    console.log('done', createDone);
+    return createDone;
+  };
+
   random();
 
   return {
     random : random,
-    word: getWord
+    word: getWord,
+    create : create,
+    done : done
   }
-  
-})
+
+};
+
+angular.module('starter.controllers', [ 'firebase', 'ngResource' ])
+.constant('FIREBASE_URL', 'https://whatshouldisay.firebaseio.com')
+.factory('Expressions', [ '$firebase', 'FIREBASE_URL', Expressions ])
+.factory('Storage', [ Storage])
+.controller('DashCtrl', [ 'Expressions', 'Storage', '$timeout',  DashCtrl ]);
 
