@@ -58,7 +58,6 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
 
   var createDone = false;
   var done = function() {
-    console.log('done', createDone);
     return createDone;
   };
 
