@@ -1,5 +1,10 @@
 /* Empty. Add your own CSS if you like */
 
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
 .bigger {
   font-size: 3rem;
 }
