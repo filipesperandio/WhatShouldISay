@@ -23,6 +23,7 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
 
   Expressions.$on('loaded', function() {
     saveAll();
+    random();
     Expressions.$on('change', saveAll);
   });
 
