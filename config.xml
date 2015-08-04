@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.filipesperandio.whatshouldisay" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>What Should I Say?</name>
   <description> Have you ever found yourself in an awkward situation that you have no idea what to say? Maybe we can give a little help. Just call our SOS.  </description>
   <author email="filipesperandio@gmail.com" href="http://filipesperandio.com/">
