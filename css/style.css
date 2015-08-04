@@ -9,10 +9,20 @@
   font-size: 3rem;
 }
 
+.pull-down {
+  position: absolute;
+  bottom: 90px;
+  z-index: -1;
+}
+
 .down {
   bottom:50px;
 }
 
 .center {
   text-align: center;
+}
+
+.tip {
+  color: grey;
 }
