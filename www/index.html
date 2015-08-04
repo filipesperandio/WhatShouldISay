@@ -38,7 +38,7 @@
       })();
     </script>
   </head>
-  <body ng-app="starter" animation="slide-left-right-ios7" ng-controller="DashCtrl as ctrl">
+  <body ng-app="starter" animation="slide-left-right-ios7" ng-controller="DashCtrl as ctrl" class="ng-cloak">
 
   <ion-view title="Details">
 
@@ -47,13 +47,6 @@
   </div>
 
   <ion-content class="has-header has-footer">
-
-  <div class="card">
-    <div class="item item-text-wrap">
-      Have you ever found yourself in an awkward situation that you have no idea what to say? Maybe we can
-      give a little help. Just call our SOS.
-    </div>
-  </div>
 
   <div class="card" ng-show="ctrl.word()">
     <h1 class="item item-text-wrap bigger">
@@ -71,26 +64,30 @@
     </a>
   </div>
 
+
   </ion-content>
 
+  <div class="card  pull-down">
+    <div class="item item-text-wrap tip">
+      Have you ever found yourself in an awkward situation that you have no idea what to say? Maybe we can
+      give a little help. Just call our SOS.
+    </div>
+  </div>
 
   <div class="bar bar-footer down item item-input-inset">
-
-      <label class="item-input-wrapper">
-        <input type="text" ng-model="newExpression.value" placeholder="type your expression here" />
-      </label>
-      <button class="button" ng-click="ctrl.create(newExpression)">
-        <i class="icon ion-checkmark-round" ng-show="ctrl.done()"></i>
-        Add
-      </button>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="newExpression.value" placeholder="suggest something funny!" />
+    </label>
+    <button class="button" ng-click="ctrl.create(newExpression)">
+      <i class="icon ion-checkmark-round" ng-show="ctrl.done()"></i>
+      Add
+    </button>
   </div>
 
 
   <div class="tabs tabs-icon-top tabs-assertive">
-    <a class="tab-item full-width"
-      ng-click="ctrl.random()">
-      <img src="./img/rocket.png" class="icon" />
-      SOS
+    <a class="tab-item full-width" ng-click="ctrl.random()">
+      <i class="icon ion-help-buoy"></i>S.O.S.
     </a>
   </div>
 
