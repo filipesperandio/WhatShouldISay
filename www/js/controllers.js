@@ -76,8 +76,6 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
     word.dislikes = dislikes;
   };
 
-  random();
-
   return {
     random : random,
     word: getWord,
