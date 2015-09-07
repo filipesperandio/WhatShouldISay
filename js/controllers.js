@@ -74,7 +74,6 @@ var DashCtrl = function(Expressions, Storage, $timeout) {
 
   var once = false;
   var getWord = function() {
-    console.log("...", word);
     return word;
   };
 
