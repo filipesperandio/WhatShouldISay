@@ -18,6 +18,7 @@
     <script src="lib/angularfire/angularfire.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
     <script src="lib/underscore/underscore.js"></script>
+    <script src="js/spin.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -39,6 +40,7 @@
     </script>
   </head>
   <body ng-app="starter" animation="slide-left-right-ios7" ng-controller="DashCtrl as ctrl" class="ng-cloak">
+    <div id="spinner"></div>
 
   <ion-view title="Details">
 
@@ -46,9 +48,9 @@
     <h1 class="title">What Should I Say?</h1>
   </div>
 
-  <ion-content class="has-header has-footer">
+  <ion-content id="content" class="has-header has-footer">
 
-  <div class="card" ng-show="ctrl.word()">
+  <div ng-show="ctrl.word()" class="card">
     <h1 class="item item-text-wrap bigger">
       {{ ctrl.word().value }}
     </h1>
