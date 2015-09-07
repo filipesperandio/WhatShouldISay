@@ -1,4 +1,12 @@
 /* Empty. Add your own CSS if you like */
+body {
+  background-color: gray;
+}
+
+.pane {
+  max-width: 704px;
+  margin: auto;
+}
 
 .full-width {
   width: 100%;
