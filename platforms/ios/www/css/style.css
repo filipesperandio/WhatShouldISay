@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+body {
+  background-color: gray;
+}
+
+.pane {
+  max-width: 704px;
+  margin: auto;
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.bigger {
+  font-size: 3rem;
+}
+
+.pull-down {
+  position: absolute;
+  bottom: 90px;
+  z-index: -1;
+}
+
+.down {
+  bottom:50px;
+}
+
+.center {
+  text-align: center;
+}
+
+.tip {
+  color: grey;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.filipesperandio.whatshouldisay" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>What Should I Say?</name>
+  <description> Have you ever found yourself in an awkward situation that you have no idea what to say? Maybe we can give a little help. Just call our SOS.  </description>
+  <author email="filipesperandio@gmail.com" href="http://filipesperandio.com/">
+    Filipe Gomes Esperandio
+  </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <icon src="img/icon.png" />
+  <preference name="fullscreen" value="false"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>
