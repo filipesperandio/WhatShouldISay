@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/What_Should_I_Say/Plugins/org.apache.cordova.console/CDVLogger.m \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/What_Should_I_Say/Plugins/org.apache.cordova.console/CDVLogger.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVAvailabilityDeprecated.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDV.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVViewController.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVDebug.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVTimer.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h \
+  /Users/filipe/workspaces/ideas/WhatShouldISay/platforms/ios/build/emulator/include/Cordova/CDVJSON.h

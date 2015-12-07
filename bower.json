@@ -1,9 +1,0 @@
-{
-  "name": "WhatShouldISay",
-  "private": "true",
-  "dependencies": {
-    "angularfire": "~0.7.1",
-    "angular-resource": "~1.2.17",
-    "underscore": "~1.6.0"
-  }
-}
